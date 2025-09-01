@@ -8,8 +8,7 @@ class Constants:
 
         Example:
         ```py
-        >>> constants = Constants()
-        >>> constants.pi()
+        >>> mm.pi()
         3.1415926535
         ```
         """
@@ -24,8 +23,7 @@ class Constants:
 
         Example:
         ```py
-        >>> constants = Constants()
-        >>> constants.e()
+        >>> mm.e()
         2.718281828459045
         ```
         """

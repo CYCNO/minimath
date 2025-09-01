@@ -13,11 +13,10 @@ class Algebra:
 
         Example:
         ```py
-        >>> algebra = Algebra()
-        >>> algebra.quadratic_roots(1, -3, 2)
+        >>> mm.quadratic_roots(1, -3, 2)
         [2.0, 1.0]
 
-        >>> algebra.quadratic_roots(1, 2, 5)
+        >>> mm.quadratic_roots(1, 2, 5)
         "No real roots"
         ```
         """

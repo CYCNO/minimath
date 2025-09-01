@@ -15,8 +15,7 @@ class Geometry(Constants):  # Inheriting from Constants to access pi() directly
 
         Example:
         ```py
-        >>> geometry = Geometry()
-        >>> geometry.distance([1, 2], [4, 6])
+        >>> mm.distance([1, 2], [4, 6])
         5.0
         ```
         """
@@ -43,8 +42,7 @@ class Geometry(Constants):  # Inheriting from Constants to access pi() directly
 
         Example:
         ```py
-        >>> geometry = Geometry()
-        >>> geometry.triangle_area(3, 4, 5)
+        >>> mm.triangle_area(3, 4, 5)
         6.0
         ```
         """
@@ -67,8 +65,7 @@ class Geometry(Constants):  # Inheriting from Constants to access pi() directly
 
         Example:
         ```py
-        >>> geometry = Geometry()
-        >>> geometry.circle_area(5)
+        >>> mm.circle_area(5)
         78.53981633974483
         ```
         """
@@ -76,3 +73,24 @@ class Geometry(Constants):  # Inheriting from Constants to access pi() directly
             return "Radius cannot be negative."
 
         return self.pi() * (r ** 2)
+
+    def circle_circumference(self, r: float) -> Union[float, str]:
+        """
+        Calculates the circumference of a circle given its radius.
+
+        Arguments:
+        r -- The radius of the circle (float)
+
+        Returns:
+        float -- The circumference of the circle.
+
+        Example:
+        ```py
+        >>> mm.circle_area(5)
+        78.53981633974483
+        ```
+        """
+        if r < 0:
+            return "Radius cannot be negative."
+
+        return 2 * self.pi() * r
