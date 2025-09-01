@@ -1,5 +1,10 @@
-# MiniMath
-minimath is a lightweight, pure-Python library for performing basic mathematical operations and utilities. It provides essential functions ranging from basic arithmetic to algebra and geometry, all implemented without any external libraries like math or numpy
+<div align="center">
+  <img src="image/logo.png" height="200">
+  <h1 align="center">MiniMath</h1>
+  <strong><i>minimath is a lightweight, pure-Python library for performing basic mathematical operations and utilities. It provides essential functions ranging from basic arithmetic to algebra and geometry, all implemented without any external libraries like math or numpy
+</i></strong>
+  <br>
+</div>
 
 ## Features
 
@@ -29,7 +34,7 @@ minimath is a lightweight, pure-Python library for performing basic mathematical
 
 ## Installation
 ```
-pip install git+https://github.com/yourusername/minimath.git
+pip install git+https://github.com/CYCNO/minimath.git
 ```
 
 ## Usage
