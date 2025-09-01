@@ -113,7 +113,7 @@ class Basic:
             result *= i
         return result
 
-    def prime_upto(self, n: int) -> List[int]:
+    def primes_upto(self, n: int) -> List[int]:
         """
         Finds all prime numbers up to 'n'.
 
