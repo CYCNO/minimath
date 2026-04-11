@@ -3,6 +3,7 @@
   <h1 align="center">MiniMath</h1>
   <strong><i>minimath is a lightweight, pure-Python library for performing basic mathematical operations and utilities. It provides essential functions ranging from basic arithmetic to algebra and geometry, all implemented without any external libraries like math or numpy
 </i></strong>
+  <img src="https://img.shields.io/badge/version-0.2.0-blue">
   <br>
 </div>
 
@@ -27,6 +28,12 @@
 - **`triangle_area(a, b, c)`**: Calculate the area of a triangle using Heron's formula.
 - **`circle_area(r)`**: Calculate the area of a circle with radius `r`.
 
+### 🔹 Linear Algebra (Matrices)
+- **`Matrix(rows, columns)`**: Initialize a matrix using dimensions or an existing 2D list.
+- **`fill(value)`**: Fill the entire matrix with a specified scalar value.
+- **Matrix Addition (`+`)**: Add two matrices together or add a scalar to a matrix.
+- **Matrix Multiplication (`*`)**: Multiply two matrices (dot product) or multiply a matrix by a scalar.
+
 ### 🔹 Constants
 - **`pi()`**: Returns First 10 Digits of pi.
 - **`e()`**: Returns First 10 Digits of e.
@@ -37,7 +44,7 @@
 pip install git+https://github.com/CYCNO/minimath.git
 ```
 
-## Usage
+### Basic Usage
 ```py
 from minimath import MiniMath
 
@@ -64,6 +71,44 @@ print(mm.distance((0, 0), (3, 4)))        # 5.0
 print(mm.triangle_area(3, 4, 5))          # 6.0
 print(mm.circle_area(5))                  # 78.53981633974483
 print(mm.circle_circumference(5))         # 31.41592653589793
+```
+
+### Matrix
+```py
+# Linear Algebra (Matrices)
+from minimath import Matrix
+
+# Creating matrices
+A = Matrix(2, 2)
+A.fill(2)
+
+B = Matrix([[1, 2], [3, 4]])
+
+# Scalar operations
+print(A + 5)
+# Output:
+# [7, 7]
+# [7, 7]
+
+print(B * 2)
+# Output:
+# [2, 4]
+# [6, 8]
+
+# Matrix operations
+print(A + B) # or Matrix.add(A, B)
+# Output:
+# [3, 4]
+# [5, 6]
+
+print(A * B) # or Matrix.multiply(A, B)
+# Output:
+# [8, 12]
+# [8, 12]
+
+# Get Index Value
+print(B[0][1])  
+# Output: 2
 ```
 ## Reporting Issues
 
@@ -105,6 +150,11 @@ We welcome contributions to **minimath**! To add a new function:
        ```
 3. **Create a Pull Request** : Fork the repo, create a branch for your changes, and submit a pull request.
 
+</details>
+<details>
+<summary>Updates</summary>
+v0.2.0:
+added matrix
 </details>
 
 ## License
