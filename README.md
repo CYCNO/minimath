@@ -1,11 +1,16 @@
 <div align="center">
   <img src="image/logo.png" height="200">
   <h1 align="center">MiniMath</h1>
-  <strong><i>minimath is a lightweight, pure-Python library for performing basic mathematical operations and utilities. It provides essential functions ranging from basic arithmetic to algebra and geometry, all implemented without any external libraries like math or numpy
-</i></strong>
-  <img src="https://img.shields.io/badge/version-0.2.0-blue">
+  <i>minimath is a lightweight, pure-Python library for performing basic mathematical operations and utilities. It provides essential functions ranging from basic arithmetic to algebra and geometry, all implemented without any external libraries like math or numpy</i>
   <br>
+  <br>
+    <img src="https://img.shields.io/badge/version-0.2.0-blue">
 </div>
+
+## Installation
+```
+pip install git+https://github.com/CYCNO/minimath.git
+```
 
 ## Features
 
@@ -37,12 +42,6 @@
 ### 🔹 Constants
 - **`pi()`**: Returns First 10 Digits of pi.
 - **`e()`**: Returns First 10 Digits of e.
-
-
-## Installation
-```
-pip install git+https://github.com/CYCNO/minimath.git
-```
 
 ### Basic Usage
 ```py
@@ -151,6 +150,8 @@ We welcome contributions to **minimath**! To add a new function:
 3. **Create a Pull Request** : Fork the repo, create a branch for your changes, and submit a pull request.
 
 </details>
+
+## Changelog
 <details>
 <summary>Updates</summary>
 v0.2.0:
