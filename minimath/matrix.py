@@ -202,8 +202,4 @@ class Matrix:
         """
         return "\n".join(str(row) for row in self.matrix)
 
-C = Matrix(2, 2)
-C.random(0, 10)
-print(C)
-
 # TODO: add transpose()
