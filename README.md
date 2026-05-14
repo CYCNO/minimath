@@ -4,7 +4,7 @@
   <i>minimath is a lightweight, pure-Python library for performing basic mathematical operations and utilities. It provides essential functions ranging from basic arithmetic to algebra and geometry, all implemented without any external libraries like math or numpy</i>
   <br>
   <br>
-    <img src="https://img.shields.io/badge/version-0.2.0-blue">
+    <img src="https://img.shields.io/badge/version-0.2.1-blue">
 </div>
 
 ## Installation
@@ -36,6 +36,7 @@ pip install git+https://github.com/CYCNO/minimath.git
 ### 🔹 Linear Algebra (Matrices)
 - **`Matrix(rows, columns)`**: Initialize a matrix using dimensions or an existing 2D list.
 - **`fill(value)`**: Fill the entire matrix with a specified scalar value.
+- **`random(lower, upper)`**: Fill the entire matrix with random values.
 - **Matrix Addition (`+`)**: Add two matrices together or add a scalar to a matrix.
 - **Matrix Multiplication (`*`)**: Multiply two matrices (dot product) or multiply a matrix by a scalar.
 
@@ -81,22 +82,24 @@ from minimath import Matrix
 A = Matrix(2, 2)
 A.fill(2)
 
+C = Matrix(2, 2)
+C.random(lower=0, upper=10)
+# [2.168461692098128, 1.4370603430803508]
+# [9.340512613241474, 4.10989315114923]
+
 B = Matrix([[1, 2], [3, 4]])
 
 # Scalar operations
 print(A + 5)
-# Output:
 # [7, 7]
 # [7, 7]
 
 print(B * 2)
-# Output:
 # [2, 4]
 # [6, 8]
 
 # Matrix operations
 print(A + B) # or Matrix.add(A, B)
-# Output:
 # [3, 4]
 # [5, 6]
 

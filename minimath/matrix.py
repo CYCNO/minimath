@@ -1,3 +1,5 @@
+import random # for .random()
+
 class Matrix:
     """
     A simple Matrix class supporting basic arithmetic operations
@@ -60,6 +62,19 @@ class Matrix:
             value (int or float): Value to fill the matrix with.
         """
         self.matrix = [[value for j in range(self.cols)] for i in range(self.rows)]
+
+    def random(self, lower=0, upper=1):
+        """
+        Fill the entire matrix with random values
+
+        Args:
+            lower (int or float): Value greater or equal to lower
+            upper (int or float): Value smaller than upper
+        """
+        self.matrix = [
+            [random.uniform(lower, upper) for _ in range(self.cols)]
+            for _ in range(self.rows)
+        ]
 
     @staticmethod
     def add(A, B):
@@ -187,5 +202,8 @@ class Matrix:
         """
         return "\n".join(str(row) for row in self.matrix)
 
+C = Matrix(2, 2)
+C.random(0, 10)
+print(C)
 
 # TODO: add transpose()

@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="minimath",
-    version="0.2.0",
+    version="0.2.1",
     description="A minimal Python library for mathematical functions",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
