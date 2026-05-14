@@ -157,6 +157,9 @@ We welcome contributions to **minimath**! To add a new function:
 ## Changelog
 <details>
 <summary>Updates</summary>
+v0.2.1:
+added matrix.random()
+
 v0.2.0:
 added matrix
 </details>
