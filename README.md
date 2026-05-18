@@ -4,7 +4,7 @@
   <i>minimath is a lightweight, pure-Python library for performing basic mathematical operations and utilities. It provides essential functions ranging from basic arithmetic to algebra and geometry, all implemented without any external libraries like math or numpy</i>
   <br>
   <br>
-    <img src="https://img.shields.io/badge/version-0.2.1-blue">
+    <img src="https://img.shields.io/badge/version-0.2.2-blue">
 </div>
 
 ## Installation
@@ -24,6 +24,7 @@ pip install git+https://github.com/CYCNO/minimath.git
 - **`digit_sum(n)`**: Calculate the sum of the digits of `n`.
 - **`nCr(n, r)`**: Calculate combinations of `n` items taken `r` at a time.
 - **`nPr(n, r)`**: Calculate permutations of `n` items taken `r` at a time.
+- **`make_function(formula)`**: Convert String expression into python function
 
 ### 🔹 Algebra / Functions
 - **`quadratic_roots(a, b, c)`**: Solve the quadratic equation `ax² + bx + c = 0`.
@@ -39,6 +40,10 @@ pip install git+https://github.com/CYCNO/minimath.git
 - **`random(lower, upper)`**: Fill the entire matrix with random values.
 - **Matrix Addition (`+`)**: Add two matrices together or add a scalar to a matrix.
 - **Matrix Multiplication (`*`)**: Multiply two matrices (dot product) or multiply a matrix by a scalar.
+
+### Calculus (Basic)
+- **`differentiate(formula)`**: Differentiate string formula
+- **`integrate(formula)`**: Integrate string formula
 
 ### 🔹 Constants
 - **`pi()`**: Returns First 10 Digits of pi.
@@ -57,6 +62,8 @@ print(mm.gcd(24, 36))           # 12
 print(mm.lcm(4, 6))             # 12
 print(mm.is_prime(7))           # True
 print(mm.primes_upto(20))       # [2, 3, 5, 7, 11, 13, 17, 19]
+f = mm.make_function("4x^2")  
+print(f(2))                     # 16.0
 
 # Number Utilities
 print(mm.digit_sum(123))        # 6
@@ -112,6 +119,22 @@ print(A * B) # or Matrix.multiply(A, B)
 print(B[0][1])  
 # Output: 2
 ```
+### Calculus 
+```py
+from minimath import Calculus
+
+c = Calculus
+print(c.integrate("4x^2")) # 1.333x^3
+print(c.differentiate("4x^2")) # 8x
+
+# Later you can convert these result into function as 
+from minimath import MiniMath
+
+func = c.differentiate("4x^2")
+f = MiniMath.make_function(func)
+print(f(2)) # 16.0
+```
+
 ## Reporting Issues
 
 <details>
@@ -157,6 +180,10 @@ We welcome contributions to **minimath**! To add a new function:
 ## Changelog
 <details>
 <summary>Updates</summary>
+v0.2.2:
+added Basic Calculus
+added make_function
+
 v0.2.1:
 added matrix.random()
 

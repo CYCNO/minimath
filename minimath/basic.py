@@ -1,4 +1,5 @@
 from typing import Union, List
+from .calculus import Calculus # For make_function()
 
 class Basic:
     def add(self, *args: Union[int, float]) -> Union[int, float]:
@@ -296,3 +297,28 @@ class Basic:
         ```
         """
         return self.factorial(n) / self.factorial(n - r)
+    
+    @staticmethod
+    def make_function(formula):
+        """
+        Can Convert a string formula into real python function 
+
+        Arguments:
+        formula -- The string formula
+
+        returns:
+        function: The function of the formula in python
+
+        Example:
+        ```py
+        >>>f = mm.make_function("4x^2 + 3x - 4")
+        >>>f(2)
+        18.0
+        ```
+        """
+        tTable = Calculus._tokenize(formula)
+        def func(x):
+            total = sum(i[0]*x**i[1] for i in tTable)
+            return total
+        return func
+
